@@ -56,7 +56,7 @@ def recuperer_mails_et_pieces():
 
                 # 2. je lui demande de regarder dans les mails si y a une image qui fini en .png, .jgp, ... 
                 #Si y a une des images je lui demande de l'enregistrer dans le fichier temps et de l'appeler de manière incrémental car il s'agit d'un compteur 1 puis 2 puis 3 ....
-                if any(word in sujet for word in ["check","image", "prtg", "météo","panorama"]):
+                if any(word in sujet for word in ["météo","observium"]):
                     compteur = 0
                     for att in msg.Attachments:
                         if att.FileName.lower().endswith(('.png', '.jpg', '.jpeg')):
